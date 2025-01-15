@@ -5,6 +5,10 @@ using UnityEngine;
 public class EnemyStateMachine : MonoBehaviour
 {
     EnemyBaseState currentState;
+    public Transform Target;
+    public float WalkSpeed = 5;
+    public Animator animator;
+
     public EnemyPatrolState PatrolState = new();
     public EnemyFollowState FollowState = new();
     public EnemyAttactState EnemyAttact = new();
@@ -15,6 +19,7 @@ public class EnemyStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         currentState = PatrolState;
         currentState.EnterState(this);
     }
