@@ -166,9 +166,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1635263162}
-  WalkSpeed: 5
-  animator: {fileID: 0}
+  WalkSpeed: 1.5
+  RunSpeed: 3
   characterController: {fileID: 393419328}
+--- !u!135 &393419330
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393419325}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &474390497
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,38 +497,6 @@ MonoBehaviour:
   player: {fileID: 1424690874}
   offset: {x: 0, y: 5, z: -6}
   smoothSpeed: 0.125
---- !u!1 &1329911749
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1329911750}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1329911750
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329911749}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0526042, y: -0.03600409, z: -1.2305146}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1424690874}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1424690869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
@@ -660,6 +649,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4420d3698db805d4f914dc099a4d829d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 393419329}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4420d3698db805d4f914dc099a4d829d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393419330}
   m_SourcePrefab: {fileID: 100100000, guid: 4420d3698db805d4f914dc099a4d829d, type: 3}
 --- !u!1001 &2121374597
 PrefabInstance:
@@ -667,19 +659,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1329911750}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.46573496
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.079004094
+      value: 0.043000005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1204921
+      value: -1.1100225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -711,7 +703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_Name
-      value: Ch14_nonPBR
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_Controller
@@ -845,6 +841,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 474390501}
   - {fileID: 2139003376}
-  - {fileID: 1329911750}
+  - {fileID: 2121374597}
   - {fileID: 1954278211}
   - {fileID: 1635263162}

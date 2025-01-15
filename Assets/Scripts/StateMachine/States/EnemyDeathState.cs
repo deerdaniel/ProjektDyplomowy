@@ -8,11 +8,19 @@ public class EnemyDeathState : EnemyBaseState
     {
 
     }
+    public override void EnterState(EnemyStateMachine enemy, GameObject obj)
+    {
+
+    }
     public override void UpdateState(EnemyStateMachine enemy)
     {
         //Death animation and death logic 
     }
     public override void OnCollisionEnter(EnemyStateMachine enemy, Collision collision)
+    {
+
+    }
+    public override void OnTriggerStay(EnemyStateMachine enemy, Collider collider)
     {
 
     }
