@@ -6,28 +6,33 @@ using UnityEngine.AI;
 public class EnemyFollowState : EnemyBaseState
 {
     GameObject player;
-    float distance;
     private NavMeshAgent agent;
+    private Animator animator;
     public override void EnterState(EnemyStateMachine enemy)
     {
         
     }
     public override void EnterState(EnemyStateMachine enemy, GameObject obj)
     {
-        agent = enemy.GetComponent<NavMeshAgent>();
-        agent.stoppingDistance = 2.0f;
         player = obj;
+        animator = enemy.GetComponent<Animator>();
+        agent = enemy.GetComponent<NavMeshAgent>();
+
+        animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsRunning", true);
+        //agent.enabled = true;
+        agent.stoppingDistance = 1.0f;
+        
+        //agent.destination = player.transform.position;
+
     }
     public override void UpdateState(EnemyStateMachine enemy)
-    {       
-        agent.destination = player.transform.position;
-        //enemy.transform.LookAt(player.transform.position);
-        ////enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, enemy.RunSpeed * Time.deltaTime);
-        //distance = Vector3.Distance(enemy.transform.position, player.transform.position);
-        //if (2.0f > distance)
-        //{
-        //    enemy.SwitchState(enemy.EnemyAttact);
-        //}
+    {
+        agent.SetDestination(player.transform.position);
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            enemy.SwitchState(enemy.EnemyAttact, player);
+        }
 
     }
     public override void OnCollisionEnter(EnemyStateMachine enemy, Collision collision)
