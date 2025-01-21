@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     private Vector3 offset;
     [SerializeField]
     private float smoothSpeed = 0.125f;
-    private void LateUpdate()
+    private void Update()
     {
         Vector3 desiredPosition = player.position + offset;
 

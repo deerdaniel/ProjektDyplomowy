@@ -15,11 +15,11 @@ public class EnemyFollowState : EnemyBaseState
     public override void EnterState(EnemyStateMachine enemy, GameObject obj)
     {
         agent = enemy.GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = 2.0f;
         player = obj;
     }
     public override void UpdateState(EnemyStateMachine enemy)
-    {
-        agent.stoppingDistance = 2.0f;
+    {       
         agent.destination = player.transform.position;
         //enemy.transform.LookAt(player.transform.position);
         ////enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, enemy.RunSpeed * Time.deltaTime);

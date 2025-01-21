@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         currentRunMovement.z = currentMovementInput.y * RunSpeed;
         isPressedMovement = currentMovementInput.x != 0 || currentMovementInput.y != 0;
     }
-    void Update()
+    void LateUpdate()
     {
         handleRotation();
         handleAnimation();
