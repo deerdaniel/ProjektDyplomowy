@@ -25,7 +25,8 @@ public class EnemyAttactState : EnemyBaseState
     {
         distance = Vector3.Distance(enemy.transform.position, player.transform.position);
         enemy.transform.LookAt(new Vector3( player.transform.position.x, 0, player.transform.position.z ));
-        Debug.Log("distance: " + agent.remainingDistance);
+        Debug.Log("distance ag: " + agent.remainingDistance);
+        Debug.Log("distance vec: " + distance);
         Debug.Log("Stoping distance" + agent.stoppingDistance);
         if (distance >= agent.stoppingDistance)
         {
