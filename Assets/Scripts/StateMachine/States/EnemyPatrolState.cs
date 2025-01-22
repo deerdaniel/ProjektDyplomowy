@@ -42,7 +42,7 @@ public class EnemyPatrolState : EnemyBaseState
             wayPointCounter = (wayPointCounter + 1) % 2;
         }
     }
-    public override void OnCollisionEnter(EnemyStateMachine enemy, Collision collision)
+    public override void OnTriggerEnter(EnemyStateMachine enemy, Collider collider)
     {
 
     }

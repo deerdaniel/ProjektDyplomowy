@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

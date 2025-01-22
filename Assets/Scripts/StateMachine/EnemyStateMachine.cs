@@ -16,9 +16,12 @@ public class EnemyStateMachine : MonoBehaviour
     //public GameObject player;
     [SerializeField]
     public CharacterController characterController;
+    BoxCollider EnemyHandCollider;
+
     // Start is called before the first frame update
     void Start()
     {
+        EnemyHandCollider = GetComponentInChildren<BoxCollider>();
         currentState = PatrolState;
         currentState.EnterState(this);
     }
@@ -28,9 +31,9 @@ public class EnemyStateMachine : MonoBehaviour
     {
         currentState.UpdateState(this);
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        currentState.OnCollisionEnter(this, collision);
+        currentState.OnTriggerEnter(this, collider);
     }
     void OnTriggerStay(Collider collider)
     {
@@ -45,5 +48,14 @@ public class EnemyStateMachine : MonoBehaviour
     {
         currentState = state;
         state.EnterState(this, obj);
+    }
+
+    void enableAttack()
+    {
+        EnemyHandCollider.enabled = true;
+    }
+    void disableAttack()
+    {
+        EnemyHandCollider.enabled = false;
     }
 }

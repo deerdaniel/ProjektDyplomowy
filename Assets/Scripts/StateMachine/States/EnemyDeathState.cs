@@ -16,7 +16,7 @@ public class EnemyDeathState : EnemyBaseState
     {
         //Death animation and death logic 
     }
-    public override void OnCollisionEnter(EnemyStateMachine enemy, Collision collision)
+    public override void OnTriggerEnter(EnemyStateMachine enemy, Collider collider)
     {
 
     }

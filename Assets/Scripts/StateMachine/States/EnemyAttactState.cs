@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.LowLevel;
 
 public class EnemyAttactState : EnemyBaseState
 {
@@ -25,21 +26,19 @@ public class EnemyAttactState : EnemyBaseState
     {
         distance = Vector3.Distance(enemy.transform.position, player.transform.position);
         enemy.transform.LookAt(new Vector3( player.transform.position.x, 0, player.transform.position.z ));
-        Debug.Log("distance ag: " + agent.remainingDistance);
-        Debug.Log("distance vec: " + distance);
-        Debug.Log("Stoping distance" + agent.stoppingDistance);
         if (distance >= agent.stoppingDistance)
         {
             Debug.Log("stop");
             enemy.SwitchState(enemy.FollowState, player);
         }
     }
-    public override void OnCollisionEnter(EnemyStateMachine enemy, Collision collision)
+    public override void OnTriggerEnter(EnemyStateMachine enemy, Collider collider)
     {
-
+        
     }
     public override void OnTriggerStay(EnemyStateMachine enemy, Collider collider)
     {
 
     }
+
 }

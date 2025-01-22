@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     InputSystemPlayer inputSystem;
     CharacterController characterController;
     Animator animator;
+    public CapsuleCollider capsuleCollider;
+    //public CapsuleCollider collider;
     float cooldownTime = 0.5f;
     float currentCooldownTime;
     Vector2 currentMovementInput;
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         inputSystem = new InputSystemPlayer();
+        //collider = GetComponentInChildren<CapsuleCollider>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         isWalkingAnimator = Animator.StringToHash("IsWalking");
@@ -108,13 +111,14 @@ public class PlayerController : MonoBehaviour
     {
         if (!isAttacking && isPressedAttack && currentCooldownTime <= 0.0f)
         {
-            animator.SetBool(isAttackingAnimatorInt, true);
+            animator.SetTrigger("IsSpinTrig");
+            //animator.SetBool(isAttackingAnimatorInt, true);
             isAttacking = true;
             currentCooldownTime = cooldownTime;
         }
         else if (isAttacking)
-        {       
-            animator.SetBool(isAttackingAnimatorInt, false);
+        {
+            //animator.SetBool(isAttackingAnimatorInt, false);
             isAttacking = false;        
         }
         else
@@ -211,7 +215,14 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-
+    void enableAttack()
+    {
+        capsuleCollider.enabled = true;
+    }
+    void disableAttack()
+    {
+        capsuleCollider.enabled = false;
+    }
     private void OnEnable()
     {
         inputSystem.PlayerControls.Enable();
