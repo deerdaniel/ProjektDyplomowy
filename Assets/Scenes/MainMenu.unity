@@ -3447,46 +3447,6 @@ PrefabInstance:
       propertyPath: volumeSlider
       value: 
       objectReference: {fileID: 100646719}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[2].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[2].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7c28c842b5d32a4459842ad7c8c983d0, type: 3}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[2].audioName
-      value: Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[3].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 974b724e18798db4c8a6dd37ee600212, type: 3}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[3].audioName
-      value: jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[2].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[3].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[2].audioVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
-      propertyPath: sounds.Array.data[3].audioVolume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5574438092088140697, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 952.66534
