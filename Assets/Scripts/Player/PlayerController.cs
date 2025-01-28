@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static bool IsGamePaused = false;
+    public PauseMenu PauseMenu;
+
     InputSystemPlayer inputSystem;
     CharacterController characterController;
     Animator animator;
@@ -61,8 +65,56 @@ public class PlayerController : MonoBehaviour
 
         inputSystem.PlayerControls.Attack.started += callAttack;
         inputSystem.PlayerControls.Attack.canceled += callAttack;
+
+        //inputSystem.PlayerControls.Pause.started += callPause;
+        //inputSystem.PlayerControls.Pause.canceled += callPause;
+        inputSystem.PlayerControls.Pause.performed += callPause;
         updateJumpVariable();
     }
+
+    //Pause menu
+    void callPause(InputAction.CallbackContext ctx)
+    {
+        //IsGamePaused = !IsGamePaused;
+        if (IsGamePaused)
+        {
+            PauseMenu.GameResume();
+        }
+        else
+        {
+            PauseMenu.GamePause();
+        }
+    }
+    //void gameResume()
+    //{
+    //    PauseMenu.SetActive(false);
+    //    Time.timeScale = 1f;
+    //    IsGamePaused = false;
+    //}
+    //void gamePause()
+    //{
+    //    PauseMenu.SetActive(true);
+    //    Time.timeScale = 0f;
+    //    IsGamePaused = true;
+    //}
+    //public void OpenControls()
+    //{
+
+    //}
+    //public void OpenOptions()
+    //{
+
+    //}
+    //public void LoadMenu()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    //}
+    //public void QuitGame()
+    //{
+    //    Application.Quit();
+    //}
+
+    //Player actions jump, attack, jump, run, movement
     void updateJumpVariable()
     {
         float timeToTop = maxTimeJump / 2;
@@ -92,6 +144,7 @@ public class PlayerController : MonoBehaviour
     }
     void LateUpdate()
     {
+        Debug.Log(IsGamePaused);
         handleRotation();
         handleAnimation();
         
