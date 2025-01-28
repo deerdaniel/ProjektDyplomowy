@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     public CapsuleCollider capsuleCollider;
     //public CapsuleCollider collider;
-    float cooldownTime = 0.5f;
+    float cooldownTime = 1.5f;
     float currentCooldownTime;
     Vector2 currentMovementInput;
     Vector3 currentWalkMovement;
@@ -109,17 +109,10 @@ public class PlayerController : MonoBehaviour
     }
     void handleAttack()
     {
-        if (!isAttacking && isPressedAttack && currentCooldownTime <= 0.0f)
+        if (isPressedAttack && currentCooldownTime <= 0.0f)
         {
             animator.SetTrigger("IsSpinTrig");
-            //animator.SetBool(isAttackingAnimatorInt, true);
-            isAttacking = true;
             currentCooldownTime = cooldownTime;
-        }
-        else if (isAttacking)
-        {
-            //animator.SetBool(isAttackingAnimatorInt, false);
-            isAttacking = false;        
         }
         else
         {

@@ -9,7 +9,7 @@ public class EnemyHandCollider : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            Debug.Log("hit");
+            FindAnyObjectByType<AudioManager>().Play("ZombieHit");
             other.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
