@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isPressedAttack && currentCooldownTime <= 0.0f)
         {
+            FindAnyObjectByType<AudioManager>().Play("Spin");
             animator.SetTrigger("IsSpinTrig");
             currentCooldownTime = cooldownTime;
         }
@@ -123,6 +124,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isJumping && characterController.isGrounded && isPressedJump)
         {
+            FindAnyObjectByType<AudioManager>().Play("Jump");
             animator.SetBool(isJumpingAnimatorInt, true);
             isJumpingAnimator = true;
             isJumping = true;

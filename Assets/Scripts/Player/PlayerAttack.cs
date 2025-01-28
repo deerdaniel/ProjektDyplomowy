@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     
         if (other.gameObject.tag == "EnemyCollider")
         {
+            FindAnyObjectByType<AudioManager>().Play("ZombieDeath");
             Destroy(other.gameObject);
         }
     }

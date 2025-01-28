@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    public Slider volumeSlider;
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class AudioManager : MonoBehaviour
            sound.audioSource.loop = sound.loop;
         }
     }
+
     private void Start()
     {
         Play("Theme");
@@ -37,7 +40,19 @@ public class AudioManager : MonoBehaviour
     {
         Play("Click");
     }
-
+    public void ChangeVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
+        //ave();
+    }
+    private void Load()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+    }
     public void Play(string name)
     {
        Sound sound = Array.Find(sounds, sound => sound.audioName == name);
