@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             //Destroy(gameObject);
         }
     }

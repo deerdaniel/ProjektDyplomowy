@@ -19,7 +19,9 @@ public class EnemyFollowState : EnemyBaseState
         player = obj;
         animator = enemy.GetComponent<Animator>();
         agent = enemy.GetComponent<NavMeshAgent>();
-
+        agent.speed = enemy.RunSpeed;
+        agent.acceleration = 40f;
+        agent.angularSpeed = 120f;
         animator.SetBool("IsAttacking", false);
         animator.SetBool("IsRunning", true);
         //agent.enabled = true;

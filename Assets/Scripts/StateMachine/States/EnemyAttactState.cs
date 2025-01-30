@@ -18,8 +18,6 @@ public class EnemyAttactState : EnemyBaseState
         agent = enemy.GetComponent<NavMeshAgent>();
         animator = enemy.GetComponent <Animator>();
         animator.SetBool("IsAttacking", true);
-        //agent.enabled = false;
-        //agent.stoppingDistance = 2.5f;
         player = obj;
     }
     public override void UpdateState(EnemyStateMachine enemy)
@@ -28,7 +26,6 @@ public class EnemyAttactState : EnemyBaseState
         enemy.transform.LookAt(new Vector3( player.transform.position.x, 0, player.transform.position.z ));
         if (distance >= agent.stoppingDistance)
         {
-            Debug.Log("stop");
             enemy.SwitchState(enemy.FollowState, player);
         }
     }

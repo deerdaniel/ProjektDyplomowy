@@ -14,7 +14,6 @@ public class EnemyDeathState : EnemyBaseState
     }
     public override void UpdateState(EnemyStateMachine enemy)
     {
-        //Death animation and death logic 
     }
     public override void OnTriggerEnter(EnemyStateMachine enemy, Collider collider)
     {

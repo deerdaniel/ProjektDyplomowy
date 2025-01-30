@@ -19,7 +19,6 @@ public class EnemyPatrolState : EnemyBaseState
     {
         animator = enemy.GetComponent<Animator>();
         agent = enemy.GetComponent<NavMeshAgent>();
-        
         animator.SetBool("IsPatroling", true);
         
         pointA = enemy.transform.position;

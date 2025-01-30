@@ -8,12 +8,18 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static bool IsGamePaused = false;
+
+    public float SpeedRotation = 20.0f;
+    public float RunSpeed = 5.0f;
+    public float WalkSpeed = 1.0f;
+
+    public CapsuleCollider capsuleCollider;
     public PauseMenu PauseMenu;
 
     InputSystemPlayer inputSystem;
     CharacterController characterController;
     Animator animator;
-    public CapsuleCollider capsuleCollider;
+    
     //public CapsuleCollider collider;
     float cooldownTime = 1.5f;
     float currentCooldownTime;
@@ -27,20 +33,17 @@ public class PlayerController : MonoBehaviour
     int isRunningAnimator;
     int isJumpingAnimatorInt;
     int isAttackingAnimatorInt;
-    public float SpeedRotation = 20.0f;
-    public float RunSpeed = 5.0f;
-    public float WalkSpeed = 1.0f;
+
     float gravity = -9.8f;
     float groundGravity = -0.05f;
     //jump
     float jumpVelocity;
-    private float maxHeightJump = 5.0f;
-    private float maxTimeJump = 0.8f;
+    float maxHeightJump = 5.0f;
+    float maxTimeJump = 0.8f;
     float multiplyFall = 2.0f;
     bool isPressedJump = false;
     bool isJumping = false;
     bool isPressedAttack = false;
-    bool isAttacking = false;
 
     private void Awake()
     {
@@ -85,34 +88,6 @@ public class PlayerController : MonoBehaviour
             PauseMenu.GamePause();
         }
     }
-    //void gameResume()
-    //{
-    //    PauseMenu.SetActive(false);
-    //    Time.timeScale = 1f;
-    //    IsGamePaused = false;
-    //}
-    //void gamePause()
-    //{
-    //    PauseMenu.SetActive(true);
-    //    Time.timeScale = 0f;
-    //    IsGamePaused = true;
-    //}
-    //public void OpenControls()
-    //{
-
-    //}
-    //public void OpenOptions()
-    //{
-
-    //}
-    //public void LoadMenu()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    //}
-    //public void QuitGame()
-    //{
-    //    Application.Quit();
-    //}
 
     //Player actions jump, attack, jump, run, movement
     void updateJumpVariable()
@@ -144,7 +119,6 @@ public class PlayerController : MonoBehaviour
     }
     void LateUpdate()
     {
-        Debug.Log(IsGamePaused);
         handleRotation();
         handleAnimation();
         
@@ -262,6 +236,17 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(rotation, targetRotation, SpeedRotation * Time.deltaTime );
         }
         
+    }
+    private void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.tag == "Finish")
+        {
+            PauseMenu.GamePauseOnFinish();
+        }
+        if (collider.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
     void enableAttack()
     {
