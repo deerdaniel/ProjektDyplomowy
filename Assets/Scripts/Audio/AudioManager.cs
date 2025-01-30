@@ -6,33 +6,21 @@ using System;
 using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
-    //public static AudioManager instance;
-    public Slider volumeSlider;
+    public Sound[] Sounds;
+    public Slider VolumeSlider;
 
     private void Awake()
     {
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-        //DontDestroyOnLoad(gameObject);
-        volumeSlider.value = AudioListener.volume;
-        foreach (Sound sound in sounds)
+        VolumeSlider.value = AudioListener.volume;
+        foreach (Sound sound in Sounds)
         {
-           sound.audioSource = gameObject.AddComponent<AudioSource>();
-           sound.audioSource.clip = sound.audioClip;
-           sound.audioSource.volume = sound.audioVolume;
-           sound.audioSource.pitch = sound.audioPitch;
-           sound.audioSource.loop = sound.loop;
+           sound.AudioSource = gameObject.AddComponent<AudioSource>();
+           sound.AudioSource.clip = sound.AudioClip;
+           sound.AudioSource.volume = sound.AudioVolume;
+           sound.AudioSource.pitch = sound.AudioPitch;
+           sound.AudioSource.loop = sound.Loop;
         }
     }
-
     private void Start()
     {
         Play("Theme");
@@ -43,21 +31,12 @@ public class AudioManager : MonoBehaviour
     }
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
-        //ave();
-    }
-    private void Load()
-    {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-    }
-    private void Save()
-    {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        AudioListener.volume = VolumeSlider.value;
     }
     public void Play(string name)
     {
-       Sound sound = Array.Find(sounds, sound => sound.audioName == name);
+       Sound sound = Array.Find(Sounds, sound => sound.AudioName == name);
         if (sound == null) { return; }
-       sound.audioSource.Play();
+       sound.AudioSource.Play();
     }
 }

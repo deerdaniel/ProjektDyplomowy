@@ -6,9 +6,9 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class EnemyAttactState : EnemyBaseState
 {
-    NavMeshAgent agent;
-    GameObject player;
-    Animator animator;
+    private NavMeshAgent agent;
+    private GameObject player;
+    private Animator animator;
     private float distance;
     public override void EnterState(EnemyStateMachine enemy)
     {

@@ -8,23 +8,17 @@ public class EnemyPatrolState : EnemyBaseState
 {
     Vector3 pointA;
     Vector3 pointB;
-    Vector3 targetPoint;
-    Vector3 currentDirection;
     Vector3[] wayPoints = new Vector3[2];
     int wayPointCounter = 1;
-    float distance;
-    NavMeshAgent agent;
     Animator animator;
     public override void EnterState(EnemyStateMachine enemy)
     {
         animator = enemy.GetComponent<Animator>();
-        agent = enemy.GetComponent<NavMeshAgent>();
         animator.SetBool("IsPatroling", true);
         
         pointA = enemy.transform.position;
         pointB = new Vector3(enemy.Target.position.x, enemy.Target.position.y, enemy.Target.position.z);
 
-        targetPoint = pointB;
         wayPoints[0] = pointA;
         wayPoints[1] = pointB;
     }

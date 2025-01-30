@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EnemyStateMachine : MonoBehaviour
 {
-    EnemyBaseState currentState;
+    
     public Transform Target;
     public float WalkSpeed = 2.0f;
     public float RunSpeed = 4.0f;
+    public CharacterController characterController;
 
     public EnemyPatrolState PatrolState = new();
     public EnemyFollowState FollowState = new();
     public EnemyAttactState EnemyAttact = new();
     public EnemyDeathState DeathState = new();
-    //public GameObject player;
-    [SerializeField]
-    public CharacterController characterController;
-    BoxCollider EnemyHandCollider;
+
+    private EnemyBaseState currentState;
+    private BoxCollider EnemyHandCollider;
 
     // Start is called before the first frame update
     void Start()

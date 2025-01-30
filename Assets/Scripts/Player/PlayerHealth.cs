@@ -6,19 +6,20 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int MaxHealth = 5;
-    private int CurrentHealth;
-    public HealthBar healthBar;
+    public HealthBar HealthBar;
 
+    private int CurrentHealth;
+    
     private void Start()
     {
         CurrentHealth = MaxHealth;
-        healthBar.SetHealth(MaxHealth);
+        HealthBar.SetHealth(MaxHealth);
     }
 
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
-        healthBar.SetHealth(CurrentHealth);
+        HealthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

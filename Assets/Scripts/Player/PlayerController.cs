@@ -12,50 +12,53 @@ public class PlayerController : MonoBehaviour
     public float SpeedRotation = 20.0f;
     public float RunSpeed = 5.0f;
     public float WalkSpeed = 1.0f;
+    public float CooldownTime = 1.5f;
 
-    public CapsuleCollider capsuleCollider;
+    public CapsuleCollider CapsuleCollider;
     public PauseMenu PauseMenu;
 
-    InputSystemPlayer inputSystem;
-    CharacterController characterController;
-    Animator animator;
-    
-    //public CapsuleCollider collider;
-    float cooldownTime = 1.5f;
-    float currentCooldownTime;
-    Vector2 currentMovementInput;
-    Vector3 currentWalkMovement;
-    Vector3 currentRunMovement;
-    bool isPressedMovement;
-    bool isPressedRun;
-    bool isJumpingAnimator;
-    int isWalkingAnimator;
-    int isRunningAnimator;
-    int isJumpingAnimatorInt;
-    int isAttackingAnimatorInt;
+    private InputSystemPlayer inputSystem;
+    private CharacterController characterController;
+    private Animator animator;
 
-    float gravity = -9.8f;
-    float groundGravity = -0.05f;
+    
+    private float currentCooldownTime;
+    private Vector2 currentMovementInput;
+    private Vector3 currentWalkMovement;
+    private Vector3 currentRunMovement;
+
+    private bool isPressedMovement;
+    private bool isPressedRun;
+    private bool isJumpingAnimator;
+
+    private int isWalkingAnimator;
+    private int isRunningAnimator;
+    private int isJumpingAnimatorInt;
+
+    private float gravity = -9.8f;
+    private float groundGravity = -0.05f;
     //jump
-    float jumpVelocity;
-    float maxHeightJump = 5.0f;
-    float maxTimeJump = 0.8f;
-    float multiplyFall = 2.0f;
-    bool isPressedJump = false;
-    bool isJumping = false;
-    bool isPressedAttack = false;
+    private float jumpVelocity;
+    private float maxHeightJump = 5.0f;
+    private float maxTimeJump = 0.8f;
+    private float multiplyFall = 2.0f;
+    private bool isPressedJump = false;
+    private bool isJumping = false;
+    private bool isPressedAttack = false;
 
     private void Awake()
     {
         inputSystem = new InputSystemPlayer();
-        //collider = GetComponentInChildren<CapsuleCollider>();
+
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
+
         isWalkingAnimator = Animator.StringToHash("IsWalking");
         isRunningAnimator = Animator.StringToHash("IsRunning");
         isJumpingAnimatorInt = Animator.StringToHash("IsJumping");
-        isAttackingAnimatorInt = Animator.StringToHash("IsSpinning");
-        currentCooldownTime = cooldownTime;
+
+        currentCooldownTime = CooldownTime;
+
         inputSystem.PlayerControls.Move.started += callMovement;
         inputSystem.PlayerControls.Move.canceled += callMovement;
         inputSystem.PlayerControls.Move.performed += callMovement;
@@ -69,8 +72,6 @@ public class PlayerController : MonoBehaviour
         inputSystem.PlayerControls.Attack.started += callAttack;
         inputSystem.PlayerControls.Attack.canceled += callAttack;
 
-        //inputSystem.PlayerControls.Pause.started += callPause;
-        //inputSystem.PlayerControls.Pause.canceled += callPause;
         inputSystem.PlayerControls.Pause.performed += callPause;
         updateJumpVariable();
     }
@@ -140,7 +141,7 @@ public class PlayerController : MonoBehaviour
         {
             FindAnyObjectByType<AudioManager>().Play("Spin");
             animator.SetTrigger("IsSpinTrig");
-            currentCooldownTime = cooldownTime;
+            currentCooldownTime = CooldownTime;
         }
         else
         {
@@ -250,11 +251,11 @@ public class PlayerController : MonoBehaviour
     }
     void enableAttack()
     {
-        capsuleCollider.enabled = true;
+        CapsuleCollider.enabled = true;
     }
     void disableAttack()
     {
-        capsuleCollider.enabled = false;
+        CapsuleCollider.enabled = false;
     }
     private void OnEnable()
     {

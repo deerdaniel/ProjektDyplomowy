@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyFollowState : EnemyBaseState
 {
-    GameObject player;
+    private GameObject player;
     private NavMeshAgent agent;
     private Animator animator;
     private float distance;
@@ -24,11 +24,7 @@ public class EnemyFollowState : EnemyBaseState
         agent.angularSpeed = 120f;
         animator.SetBool("IsAttacking", false);
         animator.SetBool("IsRunning", true);
-        //agent.enabled = true;
         agent.stoppingDistance = 0.7f;
-        
-        //agent.destination = player.transform.position;
-
     }
     public override void UpdateState(EnemyStateMachine enemy)
     {

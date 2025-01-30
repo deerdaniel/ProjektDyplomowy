@@ -1442,7 +1442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d087ac35ab4b274fab674a9b7ec632a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 244079265}
+  TimeText: {fileID: 244079265}
 --- !u!114 &244079265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,10 +1866,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: -5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: -5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &327770659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2104,10 +2104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: 10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!4 &409386543
 Transform:
   m_ObjectHideFlags: 0
@@ -2801,10 +2801,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: 5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: 5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &587763778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3127,10 +3127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: -10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: -10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!4 &615768902
 Transform:
   m_ObjectHideFlags: 0
@@ -3194,10 +3194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: 5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: 5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &631519088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3334,7 +3334,7 @@ Transform:
   m_GameObject: {fileID: 632391251}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 5.5927477, z: -15.239748}
+  m_LocalPosition: {x: 0, y: 5.5927477, z: -14.579748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4794c2b17bbf74d8780e0b632f67b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedRotation: 0.5
+  SpeedRotation: 100
 --- !u!4 &709428676
 Transform:
   m_ObjectHideFlags: 0
@@ -4629,7 +4629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4794c2b17bbf74d8780e0b632f67b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedRotation: -0.1
+  SpeedRotation: -30
 --- !u!4 &939153928
 Transform:
   m_ObjectHideFlags: 0
@@ -4841,7 +4841,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0.000006664269, z: -0.00001608897, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 5.5927477, z: -15.239748}
+  m_LocalPosition: {x: 0, y: 5.5927477, z: -14.579748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6029,10 +6029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: 5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: 5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &1182498239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6133,7 +6133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4794c2b17bbf74d8780e0b632f67b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedRotation: 0.1
+  SpeedRotation: 30
 --- !u!4 &1204507778
 Transform:
   m_ObjectHideFlags: 0
@@ -6392,10 +6392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: 10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!4 &1241430767
 Transform:
   m_ObjectHideFlags: 0
@@ -6441,10 +6441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: 10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!4 &1254718529
 Transform:
   m_ObjectHideFlags: 0
@@ -6953,7 +6953,8 @@ MonoBehaviour:
   SpeedRotation: 20
   RunSpeed: 8
   WalkSpeed: 5
-  capsuleCollider: {fileID: 1938092478}
+  CooldownTime: 1.5
+  CapsuleCollider: {fileID: 1938092478}
   PauseMenu: {fileID: 1371675723}
 --- !u!4 &1424690874 stripped
 Transform:
@@ -6973,7 +6974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 5
-  healthBar: {fileID: 914526539}
+  HealthBar: {fileID: 914526539}
 --- !u!82 &1424690877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7117,10 +7118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: -5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: -5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &1425820915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9063,10 +9064,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: -10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: -10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!4 &1670913380
 Transform:
   m_ObjectHideFlags: 0
@@ -9219,7 +9220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d689f23c7dfa5df4c83c8bd4dc8849b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameInput: {fileID: 1570714706}
+  PlayerNameInput: {fileID: 1570714706}
 --- !u!1 &1792184290
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,10 +9268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: 0
-  targetPositionInY: -5
-  targetPositionInZ: 0
-  speed: 2
+  TargetPositionInX: 0
+  TargetPositionInY: -5
+  TargetPositionInZ: 0
+  Speed: 2
 --- !u!65 &1792184293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10502,7 +10503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.29
+      value: -9.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f016db1a270d1dc4eac7264bf1eb3de5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10721,10 +10722,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a7c97fe9ae28499954bb1f0fef60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionInX: -10
-  targetPositionInY: 0
-  targetPositionInZ: 0
-  speed: 10
+  TargetPositionInX: -10
+  TargetPositionInY: 0
+  TargetPositionInZ: 0
+  Speed: 10
 --- !u!1 &2139678778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10812,6 +10813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
+      propertyPath: VolumeSlider
+      value: 
+      objectReference: {fileID: 607648724}
     - target: {fileID: 2540199039597286095, guid: 9b8148a6e7b06a94fa7e743963c7fa8f, type: 3}
       propertyPath: volumeSlider
       value: 

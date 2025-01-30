@@ -44,41 +44,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b476d25f343ae74aaa87da46bfabdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - audioName: ZombieHit
-    audioClip: {fileID: 8300000, guid: ad335076ba4064b45812b67c7f93aeaa, type: 3}
-    audioVolume: 0.5
-    audioPitch: 1
-    loop: 0
-    audioSource: {fileID: 0}
-  - audioName: Theme
-    audioClip: {fileID: 8300000, guid: 5a38af969195db44ebc6155b9e1eed8b, type: 3}
-    audioVolume: 0.2
-    audioPitch: 1
-    loop: 1
-    audioSource: {fileID: 0}
-  - audioName: Click
-    audioClip: {fileID: 8300000, guid: 7c28c842b5d32a4459842ad7c8c983d0, type: 3}
-    audioVolume: 0.5
-    audioPitch: 1
-    loop: 0
-    audioSource: {fileID: 0}
-  - audioName: Jump
-    audioClip: {fileID: 8300000, guid: 974b724e18798db4c8a6dd37ee600212, type: 3}
-    audioVolume: 0.5
-    audioPitch: 1
-    loop: 0
-    audioSource: {fileID: 0}
-  - audioName: ZombieDeath
-    audioClip: {fileID: 8300000, guid: df6b1a1426814a8468975c4951939406, type: 3}
-    audioVolume: 0.5
-    audioPitch: 1
-    loop: 0
-    audioSource: {fileID: 0}
-  - audioName: Spin
-    audioClip: {fileID: 8300000, guid: 3a8cebe87a6cf0c42bcccda84b98e698, type: 3}
-    audioVolume: 0.5
-    audioPitch: 1
-    loop: 0
-    audioSource: {fileID: 0}
-  volumeSlider: {fileID: 0}
+  Sounds:
+  - AudioName: Jump
+    AudioClip: {fileID: 8300000, guid: 974b724e18798db4c8a6dd37ee600212, type: 3}
+    AudioVolume: 0.5
+    AudioPitch: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - AudioName: Theme
+    AudioClip: {fileID: 8300000, guid: 5a38af969195db44ebc6155b9e1eed8b, type: 3}
+    AudioVolume: 0.2
+    AudioPitch: 1
+    Loop: 1
+    AudioSource: {fileID: 0}
+  - AudioName: Hit
+    AudioClip: {fileID: 8300000, guid: ad335076ba4064b45812b67c7f93aeaa, type: 3}
+    AudioVolume: 0.5
+    AudioPitch: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - AudioName: ZombieDeath
+    AudioClip: {fileID: 8300000, guid: df6b1a1426814a8468975c4951939406, type: 3}
+    AudioVolume: 0.5
+    AudioPitch: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - AudioName: Spin
+    AudioClip: {fileID: 8300000, guid: 3a8cebe87a6cf0c42bcccda84b98e698, type: 3}
+    AudioVolume: 0.5
+    AudioPitch: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
+  - AudioName: Click
+    AudioClip: {fileID: 8300000, guid: 7c28c842b5d32a4459842ad7c8c983d0, type: 3}
+    AudioVolume: 0.5
+    AudioPitch: 1
+    Loop: 0
+    AudioSource: {fileID: 0}
+  VolumeSlider: {fileID: 0}

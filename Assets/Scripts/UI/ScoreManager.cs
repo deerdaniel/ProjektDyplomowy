@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TMP_InputField playerNameInput;
+    public TMP_InputField PlayerNameInput;
     public void SaveScore()
     {
-        string playerName = playerNameInput.text;
+        string playerName = PlayerNameInput.text;
         int scoreCount = PlayerPrefs.GetInt("ScoreCount", 0);
 
         PlayerPrefs.SetFloat("PlayerTime_" + scoreCount, Timer.time);

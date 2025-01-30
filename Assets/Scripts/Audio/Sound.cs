@@ -6,11 +6,11 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound
 {
-    public string audioName;
-    public AudioClip audioClip;
-    public float audioVolume;
-    public float audioPitch;
-    public bool loop;
+    public string AudioName;
+    public AudioClip AudioClip;
+    public float AudioVolume;
+    public float AudioPitch;
+    public bool Loop;
     [HideInInspector]
-    public AudioSource audioSource;
+    public AudioSource AudioSource;
 }
