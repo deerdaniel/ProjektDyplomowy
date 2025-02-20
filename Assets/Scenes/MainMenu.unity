@@ -722,7 +722,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_SizeDelta: {x: 20, y: -0.000061035}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &163756800
 MonoBehaviour:
@@ -767,8 +767,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595709429}
   m_HandleRect: {fileID: 595709428}
   m_Direction: 2
-  m_Value: 0.99999815
-  m_Size: 0.603555
+  m_Value: 0.99999833
+  m_Size: 0.6035551
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9369a300cd4a9848aa7197b1b019227, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dbc2750e6ccdb5479b76bd309c1a458, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3693,36 +3693,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'hit sfx: https://www.youtube.com/watch?v=JcG_ugrzfHE
-
-
-    theme music:
-    https://pixabay.com/music/video-games-funny-bgm-240795/
-
-
-    jump sound: https://www.zapsplat.com/music/retro-arcade-style-game-sound-jump-version-2/
-
-
-    spin
-    sound: https://www.zapsplat.com/music/lasso-rope-spin-in-air-whoosh-fast-single-version-2/
-
-
-    zombie
-    death sound: https://www.zapsplat.com/music/male-long-strained-choking-or-being-strangled-vocal-gurgle-version-2/
-
-
-    textures:
-    https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-pbr-textures-pack-111778
-
-
-    szachownica:
-    https://ar.pinterest.com/pin/968977676088991181/
-
-
-    Animations and character
-    models: mixamo.com
-
-'
+  m_text: "U\u017Cyte animacje, modele postaci 3D, d\u017Awi\u0119ki, tekstury NIE
+    S\u0104 autorstwa osoby realizuj\u0105cej projekt.\n\nD\u017Awi\u0119k uderzenia:
+    https://www.youtube.com/watch?v=JcG_ugrzfHE\r\n\n\u015Acie\u017Cka d\u017Awi\u0119kowa:
+    https://pixabay.com/music/video-games-funny-bgm-240795/\r\n\nD\u017Awi\u0119k
+    skoku: https://www.zapsplat.com/music/retro-arcade-style-game-sound-jump-version-2/\r\n\nD\u017Awi\u0119k
+    ataku gracza: https://www.zapsplat.com/music/lasso-rope-spin-in-air-whoosh-fast-single-version-2/\r\n\nD\u017Awi\u0119k
+    \u015Bmierci przeciwnika: https://www.zapsplat.com/music/male-long-strained-choking-or-being-strangled-vocal-gurgle-version-2/\r\n\nTekstury
+    obiekt\xF3w 3D: https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-pbr-textures-pack-111778\r\n\nTekstura
+    mety: https://ar.pinterest.com/pin/968977676088991181/\r\n\nAnimacje i modele
+    postaci 3D: mixamo.com\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4649,7 +4629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.34117648}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

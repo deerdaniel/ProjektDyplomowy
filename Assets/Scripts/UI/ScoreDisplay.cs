@@ -6,14 +6,13 @@ using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public TMP_Text scoreText; // Przypisz to pole do Text w UI
+    public TMP_Text scoreText;
 
     public void DisplayScores()
     {
         int scoreCount = PlayerPrefs.GetInt("ScoreCount", 0);
         List<PlayerScore> scores = new List<PlayerScore>();
-
-        // Pobieramy wszystkie wyniki z PlayerPrefs
+        
         for (int i = 0; i < scoreCount; i++)
         {
             string playerName = PlayerPrefs.GetString("PlayerName_" + i, "Unknown");
@@ -21,10 +20,8 @@ public class ScoreDisplay : MonoBehaviour
             scores.Add(new PlayerScore(playerName, playerTime));
         }
 
-        // Sortujemy wyniki według czasu (od najlepszych)
         var sortedScores = scores.OrderBy(s => s.time).ToList();
 
-        // Wyświetlamy posortowane wyniki w UI
         scoreText.text = "High Scores:\n";
         foreach (var score in sortedScores)
         {
@@ -33,20 +30,16 @@ public class ScoreDisplay : MonoBehaviour
     }
     public void ResetScores()
     {
-        // Resetujemy wszystkie zapisane wyniki
         int scoreCount = PlayerPrefs.GetInt("ScoreCount", 0);
 
-        // Usuwamy każdy zapisany wynik
         for (int i = 0; i < scoreCount; i++)
         {
             PlayerPrefs.DeleteKey("PlayerName_" + i);
             PlayerPrefs.DeleteKey("PlayerTime_" + i);
         }
 
-        // Resetujemy licznik wyników
         PlayerPrefs.SetInt("ScoreCount", 0);
 
-        // Zapisujemy zmiany w PlayerPrefs
         PlayerPrefs.Save();
         DisplayScores();
     }
